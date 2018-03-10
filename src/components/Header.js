@@ -23,6 +23,7 @@ const Header = () => {
   return (
     <div>
       <h1>Portfolio</h1>
+      <p>This is from my dashboard component.</p>
       <NavLink exact to="/" activeStyle={navActive1}>Home</NavLink>
       <NavLink to="/portfolio" activeStyle={navActive2}>Portfolio</NavLink>
       <NavLink to="/contact" activeStyle={navActive3}>Contact</NavLink>

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import PortfolioItemPage from './PortfolioItemPage';
+
 const Portfolio = (props) => {
-  const id = props.match.params.id;
   const links = [1, 2, 3].map(itemId => (
     <Link
       key={`portfolioItem-${itemId}`}
@@ -12,24 +13,13 @@ const Portfolio = (props) => {
     </Link>
   ));
 
-  console.log(id);
-
   return (
     <div>
-    {isNaN(id) ?
+      <h2>My Work</h2>
+      <h4>Checkout the following thins I've done:</h4>
       <div>
-        <h2>My Work</h2>
-        <h4>Checkout the following thins I've done:</h4>
-        <div>
-          {links}
-        </div>
+        {links}
       </div>
-      :
-      <div>
-        <h2>A Thing I've Done</h2>
-        <h4>This is page for the item with id of {id}</h4>
-      </div>
-    }
     </div>
   );
 };
